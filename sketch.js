@@ -23,6 +23,10 @@ function setup(){
 function draw(){
 
     // add condition to check if any background image is there to add
+    if(backgroundImg){
+        background(backgroundImg);
+    }
+     
 
 
     Engine.update(engine);
@@ -66,7 +70,7 @@ async function Getbackgroundimg() {
         }
         else if(hour>=22&&hour<=24){
             bg="sunrise10.png"
-        }
+        
     }
-   }
+   backgroundImg=loadImage(bg);
 }
